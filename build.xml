@@ -9,6 +9,12 @@
         
     </target>
     
+    <target name="main" depends="compile">
+        
+        
+        
+    </target>
+    
     
     
 </project>
