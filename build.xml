@@ -1,0 +1,14 @@
+<project >
+    <property name="src" location="src"/>
+    <property name="build" location="build"/>
+    
+    
+    <target name="compile">
+        
+        <javac srcdir="${src}" destdir=${build}"/>
+        
+    </target>
+    
+    
+    
+</project>
