@@ -8,7 +8,10 @@ public class Module_A_Test {
 
 	@Test
 	public void test() {
-		assertEquals("1 + 1 = 2", 2, 1+1);
+
+		Module_A module_a = new Module_A();
+
+		assertEquals("This should return 1", 1, module_a.return_1());
 	}
 
 }

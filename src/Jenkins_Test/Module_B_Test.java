@@ -8,7 +8,11 @@ public class Module_B_Test {
 
 	@Test
 	public void test() {
-		assertEquals("1 + 1 = 2", 2, 1+1);
+
+		Module_B module_b = new Module_B();
+
+		assertEquals("This should return True", true,
+				module_b.is_positive_int(5));
 	}
 
 }
