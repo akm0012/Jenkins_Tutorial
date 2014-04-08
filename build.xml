@@ -1,38 +1,37 @@
-<project>
+<project basedir=".">
 	<property name="src" location="src" />
-	<property name="build" location="build" />
+	<property name="build2" location="build" />
 
 	<target name="clean">
 		<delete dir="build" />
 		<mkdir dir="build" />
+		<delete dir="testReport" />
+		<mkdir dir="testReport" />
 	</target>
 
 	<!-- Define the classpath which includes the junit.jar and the classes after 
 		compiling -->
 	<path id="junit.class.path">
 		<pathelement location="src/junit.jar" />
-		<!-- <pathelement location="src/hamcrest-core.jar" /> -->
-		<pathelement path="${build.dir}" />
+		<pathelement location="src/hamcrest-core.jar" />
+		<pathelement path="${build2}" />
 	</path>
 
 	<target name="compile">
 
-		<javac srcdir="${src}" destdir="${build}">
+		<javac srcdir="${src}" destdir="${build2}">
 			<classpath refid="junit.class.path" />
 		</javac>
 
 	</target>
 
-	<target name="test">
+	<target name="test" depends="compile">
 
-		<junit>
-			<test name="Jenkins_Test.Module_A_Test.java" />
+		<junit printsummary="yes">
 			<classpath refid="junit.class.path" />
-		</junit>
-
-		<junit>
-			<test name="Jenkins_Test.Module_B_Test.java" />
-			<classpath refid="junit.class.path" />
+			<formatter type="xml" />
+			<test name="Jenkins_Test.Module_A_Test" todir="testReport" />
+			<test name="Jenkins_Test.Module_B_Test" todir="testReport" />
 		</junit>
 
 	</target>
