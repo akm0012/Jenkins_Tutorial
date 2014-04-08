@@ -26,12 +26,12 @@
 	<target name="test">
 
 		<junit>
-			<test name="Jenkins_Test.Module_A_Test.java" />
+			<test name="Module_A_Test.java" />
 			<classpath refid="junit.class.path" />
 		</junit>
 
 		<junit>
-			<test name="Jenkins_Test.Module_B_Test.java" />
+			<test name="Module_B_Test.java" />
 			<classpath refid="junit.class.path" />
 		</junit>
 
