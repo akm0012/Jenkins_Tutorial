@@ -18,6 +18,10 @@
 		<junit>
 			<test name="Jenkins_Test.Module_A_Test" />
 		</junit>
+		
+		<junit>
+			<test name="Jenkins_Test.Module_B_Test" />
+		</junit>
 
 	</target>
 
