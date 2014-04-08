@@ -6,5 +6,4 @@ public class Module_B {
 		// TODO Auto-generated constructor stub
 	}
 
-
 }

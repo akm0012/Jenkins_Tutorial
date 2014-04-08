@@ -1,24 +1,30 @@
-<project >
-    <property name="src" location="src"/>
-    <property name="build" location="build"/>
-    
-    <target name="clean">
-        <delete dir="build"/>
-        <mkdir dir="build"/>
-    </target>
-    
-    <target name="compile">
-        
-        <javac srcdir="${src}" destdir="${build}"/>
-        
-    </target>
-    
-    <target name="main" depends="clean,compile">
-        
-        
-        
-    </target>
-    
-    
-    
+<project>
+	<property name="src" location="src" />
+	<property name="build" location="build" />
+
+	<target name="clean">
+		<delete dir="build" />
+		<mkdir dir="build" />
+	</target>
+
+	<target name="compile">
+
+		<javac srcdir="${src}" destdir="${build}" />
+
+	</target>
+
+	<target name="test">
+
+		<junit>
+			<test name="Jenkins_Test.Module_A_Test" />
+		</junit>
+
+	</target>
+
+	
+	<target name="main" depends="clean,compile,test"/>
+
+
+
+
 </project>
