@@ -11,7 +11,7 @@
 		compiling -->
 	<path id="junit.class.path">
 		<pathelement location="src/junit.jar" />
-		<pathelement location="src/hamcrest-core.jar" />
+		<!-- <pathelement location="src/hamcrest-core.jar" /> -->
 		<pathelement path="${build.dir}" />
 	</path>
 
