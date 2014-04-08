@@ -7,9 +7,19 @@
 		<mkdir dir="build" />
 	</target>
 
+	<!-- Define the classpath which includes the junit.jar and the classes after 
+		compiling -->
+	<path id="junit.class.path">
+		<pathelement location="lib/junit.jar" />
+		<!-- <pathelement location="lib/hamcrest-core.jar" /> -->
+		<pathelement path="${build.dir}" />
+	</path>
+
 	<target name="compile">
 
-		<javac srcdir="${src}" destdir="${build}" />
+		<javac srcdir="${src}" destdir="${build}">
+			<classpath refid="junit.class.path" />
+		</javac>
 
 	</target>
 
