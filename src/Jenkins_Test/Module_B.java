@@ -12,7 +12,7 @@ public class Module_B {
 		
 		Module_A module_A = new Module_A();
 		
-		result = module_A.return_1() + module_A.return_1();
+		result = module_A.return_num() + module_A.return_num();
 		
 		return result;
 	}
