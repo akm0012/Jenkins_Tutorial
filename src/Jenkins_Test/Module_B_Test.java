@@ -11,8 +11,7 @@ public class Module_B_Test {
 
 		Module_B module_b = new Module_B();
 
-		assertEquals("This should return True", true,
-				module_b.is_positive_int(5));
+		assertEquals("This should return Two", 2, module_b.return_two());
 	}
 
 }

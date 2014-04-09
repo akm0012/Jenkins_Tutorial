@@ -6,21 +6,14 @@ public class Module_B {
 		// TODO Auto-generated constructor stub
 	}
 
-	public boolean is_positive_int(int param) {
+	public int return_two() {
 		
 		int result; 
 		
 		Module_A module_A = new Module_A();
 		
-		result = param * module_A.return_1();
+		result = module_A.return_1() + module_A.return_1();
 		
-		boolean isPositive = false;
-		
-		if (result > 0) {
-			isPositive = true;
-		}
-		
-		
-		return isPositive;
+		return result;
 	}
 }
